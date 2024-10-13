@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex flex-col bg-neutral-900 h-screen">
+    <div className="flex flex-col bg-neutral-900 h-screen overflow-auto">
       <header>
         <div className="container mx-auto flex justify-between py-6 items-center">
           <Link href="/">
@@ -34,8 +34,10 @@ export default function Home() {
         </div>
       </header>
 
-      <div className="container mx-auto">
-        <div className="grid grid-cols-2 gap-6 h-[700px]">
+      <div className="container mx-auto my-6">
+        <div className="flex flex-col md:grid md:grid-cols-2 gap-6">
+          <div className="bg-neutral-700 rounded md:order-last h-[300px] md:h-[700px]"></div>
+
           <div className="flex flex-col justify-center text-neutral-300">
             <div className="mb-8">
               <div className="mb-2  ">Oi, meu nome é</div>
@@ -64,7 +66,19 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <div className="bg-neutral-700 rounded h-full"></div>
+        </div>
+      </div>
+
+      <div className="container mx-auto my-12">
+        <h2 className="text-center text-3xl font-bold text-neutral-300">
+          Meu Portifólio
+        </h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+          <div className="rounded bg-neutral-700 h-[350px]"></div>
+          <div className="rounded bg-neutral-700 h-[350px]"></div>
+          <div className="rounded bg-neutral-700 h-[350px]"></div>
+          <div className="rounded bg-neutral-700 h-[350px]"></div>
         </div>
       </div>
     </div>
